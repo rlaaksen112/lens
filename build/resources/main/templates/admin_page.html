@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>관리자 시스템</title>
+	<link rel="stylesheet" type="text/css" href="/css/navbarstyle.css" />
+	<link rel="stylesheet" type="text/css" href="/css/adminstyle.css" />
+</head>
+
+<body>
+	<div class="container">
+		<nav th:replace="navbar_logo :: navbarFragment"></nav>
+		<nav th:replace="navbar_statelog :: navbarFragment"></nav>
+		<div class="admintitle" align="center">
+			<hr>
+			<nav th:replace="navbar_admin :: navbarFragment"></nav>
+		</div>
+		<div class="admin_btn" align="center">
+			<div>
+				<ul>
+					<a th:href="@{/member/admin/reservation}">예약 내역</a>
+				</ul>
+				<ul>
+					<a th:href="@{/member/admin/maker}">메이커 등록</a>
+				</ul>
+				<ul>
+					<a th:href="@{/member/admin/product}">제품 등록</a>
+				</ul>
+				<ul>
+					<a th:href="@{/member/admin/options}">재고 관리</a>
+				</ul>
+				<ul>
+					<a th:href="@{/member/admin/store}">매장 등록</a>
+				</ul>
+				<ul>
+					<a th:href="@{/member/admin/create/manager}">관리자 가입</a>
+				</ul>
+			</div>
+		</div>
+	</div> <!-- /container -->
+</body>
+
+</html>

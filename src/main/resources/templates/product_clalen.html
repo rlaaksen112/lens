@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클라렌</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/navbarstyle.css" />
+    <link rel="stylesheet" type="text/css" href="/css/productstyle.css" />
+</head>
+
+<body>
+    <div class="container">
+        <nav th:replace="navbar_logo :: navbarFragment"></nav>
+    	<nav th:replace="navbar_statelog :: navbarFragment"></nav>
+    	<nav th:replace="navbar_product :: navbarFragment"></nav>
+        <div class="product" align="center">
+            <h2>
+				<a th:href="@{/member/product/clalen}">클라렌</a>
+			</h2>
+        </div>
+        <div id="tab_con01" class="tab_con">
+            <div class="slick">
+				<div class="productList">
+					<div class="a1">
+                		<li>
+							<a th:href="@{/member/product/reservation}">
+								<p><img src="/image/lens19.jpg" alt="클라렌 오투오투">클라렌 오투오투</p>
+							</a>
+               	 		</li>
+                		<li>
+							<a th:href="@{/member/product/reservation}">
+								<p><img src="/image/lens20.jpg" alt="클라렌 프리덤380">클라렌 프리덤380</p>
+							</a>
+                		</li>
+                		<li>
+							<a th:href="@{/member/product/reservation}">
+								<p><img src="/image/lens21.jpg" alt="클라렌 아이리스 토릭">클라렌 아이리스 토릭</p>
+							</a>
+                		</li>
+                	</div>
+					<div class="a2">
+                		<li>
+							<a th:href="@{/member/product/reservation}">
+								<p><img src="/image/lens22.jpg" alt="클라렌 아이리스 원데이">클라렌 아이리스 원데이</p>
+							</a>
+                		</li>
+                		<li>
+							<a th:href="@{/member/product/reservation}">
+								<p><img src="/image/lens23.jpg" alt="클라렌 아이리스 M">클라렌 아이리스 M</p>
+							</a>
+                		</li>
+                		<li>
+							<a th:href="@{/member/product/reservation}">
+								<p><img src="/image/lens24.jpg" alt="클라렌 아이리스 2">클라렌 아이리스 2/p>
+							</a>
+                		</li>
+                	</div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- /container --> 
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.productList').slick({
+				dots: true,
+				autoplay: true
+			});
+		});
+	</script>
+</body>
+
+</html>

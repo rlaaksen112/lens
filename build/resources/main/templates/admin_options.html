@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>재고 추가</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+	<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+	<link rel="stylesheet" type="text/css" href="/css/navbarstyle.css" />
+	<link rel="stylesheet" type="text/css" href="/css/bootstrapstyle.css" />
+</head>
+
+<body>
+	<nav th:replace="navbar_admin :: navbarFragment"></nav>
+	<nav th:replace="navbar_statelog2 :: navbarFragment"></nav>
+	<div class="container">
+		<div class="my-3">
+			<form th:action="@{/member/admin/options}" method="post">
+				<div class="mb-3">
+					<label for="productName" class="form-label">제품 이름</label>
+					<input type="text" name="productName" Id="productName" class="form-control">
+				</div>
+				<div class="mb-3">
+					<label for="productPrice" class="form-label">제품 가격</label>
+					<input type="text" name="productPrice" Id="productPrice" class="form-control">
+				</div>
+				<div class="mb-3">
+					<label for="productOption" class="form-label">제품 도수</label>
+					<input type="text" name="productOption" Id="productOption" class="form-control">
+				</div>
+				<div class="mb-3">
+					<label for="storeStock" class="form-label">제품 재고</label>
+					<input type="text" name="storeStock" Id="storeStock" class="form-control">
+				</div>
+				<button type="submit" class="btn btn-primary">등록하기</button>
+			</form>
+				<div class="mb-3">
+					<a th:href="@{/member/admin/modify}">재고수정</a>
+				</div>
+				<div class="mb-3">
+					<a th:href="@{/member/admin/stock}">재고확인</a>
+				</div>
+		</div>
+		<div class="back">
+			<a th:href="@{/member/admin/page}">뒤로 가기</a>
+		</div>
+	</div> <!-- /container -->
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<html layout:decorate="~{layout}">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>로그인</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+	<link rel="stylesheet" type="text/css" href="/css/navbarstyle.css" />
+	<link rel="stylesheet" type="text/css" href="/css/bootstrapstyle.css" />
+</head>
+
+<body>
+	<nav th:replace="navbar_logo :: navbarFragment"></nav>
+	<div layout:fragment="content" class="container my-3">
+		<form th:action="@{/member/login}" method="post">
+			<div th:if="${param.error}">
+				<div class="alert alert-danger">
+					사용자ID 또는 비밀번호를 확인해 주세요.
+				</div>
+			</div>
+			<div class="mb-3">
+				<label for="memberId" class="form-label">사용자ID</label>
+				<input type="text" name="memberId" id="memberId" class="form-control">
+			</div>
+			<div class="mb-3">
+				<label for="memberPw" class="form-label">비밀번호</label>
+				<input type="password" name="memberPw" id="memberPw" class="form-control">
+			</div>
+			<button type="submit" class="btn btn-primary">로그인</button>
+		</form>
+	</div>
+</body>
+
+</html>

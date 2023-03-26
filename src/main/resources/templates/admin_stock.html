@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재고 추가</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/navbarstyle.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/stockstyle.css"/>
+
+</head>
+
+<body>
+<nav th:replace="navbar_admin :: navbarFragment"></nav>
+<nav th:replace="navbar_statelog2 :: navbarFragment"></nav>
+<hr>
+<h2>재고 확인</h2>
+<div class="container">
+    <div class="admin_btn" align="center">
+                <div class="stock">
+                    <div class="row1">가게이름</div>
+                    <div class="row2">제품이름</div>
+                    <div class="row3">제품옵션</div>
+                    <div class="row4">제품가격</div>
+                    <div class="row5">제품재고</div>
+                </div>
+                <div class="card my-3" th:each="product : ${a}">
+                    <div th:text="${product.store.storeName}"></div>
+                    <div th:text="${product.productName}"></div>
+                    <div th:each="options : ${product.options}">
+                        <div th:text="${options.productOption}"></div>
+                        <div th:text="${options.productPrice}"></div>
+                        <div th:text="${options.storeStock}"></div>
+                    </div>
+                </div> <!-- /container -->
+<!--        <table class="table">-->
+<!--            <thead>-->
+<!--            <tr>-->
+<!--                <th>가게이름</th>-->
+<!--                <th>제품이름</th>-->
+<!--                <th>제품가격</th>-->
+<!--                <th>제품옵션</th>-->
+<!--                <th>제품재고</th>-->
+<!--            </tr>-->
+<!--            </thead>-->
+<!--            <tbody>-->
+<!--            <tr th:each="options : ${a.options}">-->
+<!--                <td th:text="${options.productOption}"></td>-->
+<!--            </tr>-->
+<!--            </tr>-->
+<!--            </tbody>-->
+<!--        </table>-->
+    </div>
+</div> <!-- /container -->
+</body>
+
+</html>

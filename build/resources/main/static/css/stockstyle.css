@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+hr{
+    margin-top: 20px;
+}
+
+
+.container{
+   
+   position: relative;
+    width: 100%;
+    margin-left: 220px;
+    margin-top: 60px;
+}
+h2{
+	    margin-top: 25px;
+	    text-align: center;
+}
+.stockmy-3 {
+   background-color:#fff;
+   display: table-header-group;
+   font-weight: normal;
+   text-align: center;
+}
+
+.stock{
+    display: table-row;
+}
+
+.row1{
+    border: 1px solid #000;
+	display: table-cell;
+	padding: 10px 40px;
+	background-color: #f8d7da;
+}
+
+.row2{
+    border: 1px solid #000;
+	display: table-cell;
+	padding: 10px 40px;
+	background-color: #f8d7da;
+}
+
+.row3{
+    border: 1px solid #000;
+	display: table-cell;
+	padding: 10px 40px;
+	background-color: #f8d7da;
+}
+
+.row4{
+    border: 1px solid #000;
+	display: table-cell;
+	padding: 10px 40px;
+	background-color: #f8d7da;
+}
+
+.row5{
+	border: 1px solid #000;
+	display: table-cell;
+	padding: 10px 40px;
+	background-color: #f8d7da;
+}
+
+.card my-3{
+	border: 1px solid #000;
+    display: table-cell;
+    padding: 10px 40px;
+    background-color: #f8d7da;
+}

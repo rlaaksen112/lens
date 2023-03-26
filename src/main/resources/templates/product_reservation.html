@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>재고 추가</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+	<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+	<link rel="stylesheet" type="text/css" href="/css/navbarstyle.css" />
+	<link rel="stylesheet" type="text/css" href="/css/bootstrapstyle.css" />
+</head>
+
+<body>
+	<nav th:replace="navbar_logo :: navbarFragment"></nav>
+	<div class="container">
+		<div class="my-3">
+			<form th:action="@{/member/product/reservation}" method="post">
+				<div class="mb-3">
+					<fieldset>
+						<legend>매장 선택</legend>
+						<select name="storeName" Id="storeName">
+							<option>매장 선택</option>
+							<option>덕천점</option>
+							<option>서면점</option>
+							<option>남포점</option>
+							<option>광안점</option>
+							<option>동래점</option>
+						</select>
+					</fieldset>
+				</div>
+				<div class="mb-3">
+					<label for="count" class="form-label">방문 시간</label>
+					<input type="datetime-local" name="buyTime" Id="buyTime" class="form-control">
+				</div>
+				<div class="mb-3">
+					<fieldset>
+						<legend>제품 이름</legend>
+						<select name="productName" Id="productName">
+							<option>제품 이름 선택</option>
+							<option>아큐브 오아시스 원데이 난시용 19000원 </option>
+							<option>아큐브 오아시스 원데이 20000원</option>
+							<option>아큐브 오아시스 난시용 11000원</option>
+							<option>원데이 아큐브 디파인 12000원</option>
+							<option>아큐브2 디파인 15000원</option>
+							<option>원데이 아큐브 모이스트 멀티포컬 16500원</option>
+						</select>
+					</fieldset>
+				</div>
+				<div class="mb-3">
+					<legend>제품 도수</legend>
+					<select name="productOption" Id="productOption">
+						<option>제품 도수 선택</option>
+						<option>-5</option>
+						<option>-4.5</option>
+						<option>-4</option>
+						<option>-3.5</option>
+						<option>-3</option>
+						<option>-2.5</option>
+						<option>-2</option>
+						<option>-1.5</option>
+						<option>-1</option>
+						<option>-0.5</option>
+						<option>0</option>
+						<option>0.5</option>
+						<option>1</option>
+						<option>1.5</option>
+						<option>2</option>
+						<option>2.5</option>
+						<option>3</option>
+						<option>3.5</option>
+						<option>4</option>
+						<option>4.5</option>
+						<option>5</option>
+					</select>
+					</fieldset>
+				</div>
+				<div class="mb-3">
+					<label for="count" class="form-label">구매 수량</label>
+					<input type="number" name="count" Id="count" class="form-control">
+				</div>
+				<button type="submit" class="btn btn-primary">등록하기</button>
+			</form>
+		</div>
+		<div class="back">
+         	<a th:href="@{/member/product/acuvue}">뒤로 가기</a>
+        </div>
+	</div> <!-- /container -->
+</body>
+
+</html>

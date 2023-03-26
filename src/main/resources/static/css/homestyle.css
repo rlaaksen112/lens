@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #ffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul,li {
+    list-style: none;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.container {
+    position: relative;
+}
+
+
+/* 배너 */
+
+.homebanner {}
+
+.homebanner .your-class {
+    top: 0px;
+}
+
+.homebanner .your-class .slick-slide {
+    height: 760px;
+}
+
+.homebanner .your-class .yc1 {
+    background-image: url(/image/banner1.jpg);
+    background-size: cover;
+}
+
+.homebanner .your-class .yc2 {
+    background-image: url(/image/banner1.jpg);
+    background-size: cover;
+}
+
+.homebanner .your-class .yc3 {
+    background-image: url(/image/banner1.jpg);
+    background-size: cover;
+}
+
+.homebanner .your-class .slick-arrow {
+    position: absolute;
+    z-index: 50;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0;
+    line-height: 0;
+    border: none;
+    width: 30px;
+    height: 40px;
+    background: none;
+    transition: 0.3s;
+}
+
+.homebanner .your-class .slick-prev {
+    left: 5%;
+}
+
+.homebanner .your-class .slick-prev:before {
+    content: "\f359";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    font-size: 30px;
+    color: white;
+}
+
+.homebanner .your-class .slick-prev:hover:before {
+    color: #f8d7da;
+}
+
+.homebanner .your-class .slick-next {
+    right: 5%;
+}
+
+.homebanner .your-class .slick-next:before {
+    content: "\f35a";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    font-size: 30px;
+    color: white;
+}
+
+.homebanner .your-class .slick-next:hover:before {
+    color: #f8d7da;
+}
+
+.homebanner .your-class .slick-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+}
+
+.homebanner .your-class .slick-dots li {
+    float: left;
+    margin: 0 5px;
+    list-style: none;
+    width: 8px;
+    height: 8px;
+    background: #dbdbdb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.homebanner .your-class .slick-dots li.slick-active {
+    background: #f5c2c7;
+}
+
+.homebanner .your-class .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    background: none;
+    border: none;
+}

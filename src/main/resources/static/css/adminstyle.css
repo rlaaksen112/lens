@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body{
+    background-color: #ffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+   position: relative;
+}
+
+.admintitle hr {
+   margin-top: 40px;
+   margin-bottom: 40px;
+}
+
+/* 버튼 */
+.admin_btn ul a {
+   background: #f8d7da;
+   border: 2px solid #f5c2c7;
+   border-radius: 25px;
+   display: block;
+   margin: 40px;
+   padding: 20px;
+   width: 180px;
+   font-size: 15px;
+   color: #343a40;
+   font-weight: bold;
+   text-decoration: none;
+   text-align: center;
+
+}
+
+.admin_btn ul a:hover {
+   background-color: #f5c2c7;
+   transition: 0.3s;
+   color: #ffff;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아큐브</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/navbarstyle.css" />
+    <link rel="stylesheet" type="text/css" href="/css/productstyle.css" />
+</head>
+
+<body>
+    <div class="container">
+   		<nav th:replace="navbar_logo :: navbarFragment"></nav>
+    	<nav th:replace="navbar_statelog :: navbarFragment"></nav>
+    	<nav th:replace="navbar_product :: navbarFragment"></nav>
+        <div class="product" align="center">
+            <h2>
+           		<a th:href="@{/member/product/acuvue}">아큐브</a>
+            </h2>
+   </div>
+        <div id="tab_con01" class="tab_con"> <!-- align="center" style="display: block;" -->
+        	<div class="slick">
+				<div class="productList">
+					<div class="a1">
+						<li>
+                    		<a th:href="@{/member/product/reservation}">
+								<p><img src="/image/lens1.jpg" alt="아큐브 디파인">아큐브 디파인</p>
+							</a>
+                		</li>
+						<li>
+                    		<a th:href="@{/member/product/reservation}">
+								<p><img src="/image/lens2.jpg" alt="아큐브 모이스트">아큐브 모이스트</p>
+							</a>
+                		</li>
+						<li>
+                   			<a th:href="@{/member/product/reservation}">
+								<p><img src="/image/lens3.jpg" alt="아큐브 오아시스">아큐브 오아시스</p>
+							</a>
+                		</li>
+					</div>
+					<div class="a2">
+						<li>
+                    		<a th:href="@{/member/product/reservation}">
+								<p><img src="/image/lens4.jpg" alt="아큐브 트루아이">아큐브 트루아이</p>
+							</a>
+                		</li>
+                		<li>
+                    		<a th:href="@{/member/product/reservation}">
+								<p></p><img src="/image/lens5.jpg" alt="아큐브 비타">아큐브 비타</p>
+							</a>
+                		</li>
+                		<li>
+                    		<a th:href="@{/member/product/reservation}">
+								<p><img src="/image/lens6.jpg" alt="아큐브2 디파인">아큐브2 디파인</p>
+							</a>
+                		</li>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div> <!-- /container -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.productList').slick({
+				dots: true,
+				autoplay: true
+			});
+		});
+	</script>
+</body>
+
+</html>

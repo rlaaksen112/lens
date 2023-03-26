@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>메이커 등록</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+	<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+	<link rel="stylesheet" type="text/css" href="/css/navbarstyle.css" />
+	<link rel="stylesheet" type="text/css" href="/css/bootstrapstyle.css" />
+</head>
+
+<body>
+	<nav th:replace="navbar_admin :: navbarFragment"></nav>
+	<nav th:replace="navbar_statelog2 :: navbarFragment"></nav>
+	<div class="container">
+		<div class="my-3">
+			<form th:action="@{/member/admin/maker}" th:object="${makerCreateForm}" method="post">
+				<div th:replace="form_errors :: formErrorsFragment"></div>
+				<div class="mb-3">
+					<label for="makerName" class="form-label">메이커 이름</label>
+					<input type="text" name="makerName" id="makerName" class="form-control">
+				</div>
+				<button type="submit" class="btn btn-primary">등록하기</button>
+			</form>
+		</div>
+		<div class="back">
+			<a th:href="@{/member/admin/page}">뒤로 가기</a>
+		</div>
+	</div> <!-- /container -->
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>매니저 회원가입</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+	<link rel="stylesheet" type="text/css" href="/css/navbarstyle.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrapstyle.css"/>
+</head>
+
+<body>
+	<div layout:fragment="content" class="container my-3">
+		<div class="my-3">
+			<div>
+				<h2>회원가입</h2>
+			</div>
+		</div>
+		<form th:action="@{/member/admin/create/manager}" th:object="${memberCreateForm2}" method="post">
+			<div th:replace="form_errors :: formErrorsFragment"></div>
+				<div class="mb-3">
+					<label for="memberId" class="form-label">사용자ID</label>
+					<input type="text" th:field="*{memberId}" class="form-control">
+				</div>
+			<div class="mb-3">
+				<label for="memberPw" class="form-label">비밀번호</label>
+				<input type="password" th:field="*{memberPw}" class="form-control">
+			</div>
+			<div class="mb-3">
+				<label for="memberPw2" class="form-label">비밀번호 확인</label>
+				<input type="password" th:field="*{memberPw2}" class="form-control">
+			</div>
+			<div class="mb-3">
+				<label for="memName" class="form-label">사용자 이름</label>
+				<input type="text" th:field="*{memberName}" class="form-control">
+			</div>
+			<div class="mb-3">
+				<label for="tell" class="form-label">핸드폰 번호</label>
+				<input type="tel" th:field="*{memberPhone}" class="form-control">
+			</div>
+			<div class="mb-3">
+				<label for="email" class="form-label">이메일</label>
+				<input type="email" th:field="*{memberEmail}" class="form-control">
+			</div>
+			<div class="mb-3">
+				<label for="number" class="form-label">생년월일</label>
+				<input type="number" th:field="*{memberBirth}" class="form-control">
+			</div>
+			<div class="mb-3">
+				<label for="text" class="form-label">매장이름</label>
+				<input type="text" name = "storeName" Id = "storeName" class="form-control">
+			</div>
+			<button type="submit" class="btn btn-primary">회원가입</button>
+		</form>
+	</div>
+</body>
+
+</html>

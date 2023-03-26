@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>예약내역</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+	<link rel="stylesheet" type="text/css" href="/css/navbarstyle.css" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrapstyle.css" />
+    <style>
+    	thead{
+    		background-color: #f8d7da;
+    		
+    	}
+    
+    </style>
+</head>
+
+<body>
+	<div class="container">
+	<nav th:replace="navbar_logo :: navbarFragment"></nav>
+		<div class="admin_btn" align="center">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>회원이름</th>
+						<th>가게이름</th>
+						<th>제품이름</th>
+						<th>제품옵션</th>
+						<th>구매개수</th>
+						<th>예약시간</th>
+						<th>등록시간</th>
+						<th>예약취소</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="reservation : ${reservationList}">
+						<td th:text="${reservation.member.memberName}"></td>
+						<td th:text="${reservation.store.storeName}"></td>
+						<td th:text="${reservation.productName}"></td>
+						<td th:text="${reservation.productOption}"></td>
+						<td th:text="${reservation.count}"></td>
+						<td th:text="${reservation.buyTime}"></td>
+						<td th:text="${reservation.createDate}"></td>
+						<td>
+							<a th:href="|/member/reservation/detail/${reservation.reservationCode}|">예약 취소</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div> <!-- /container -->
+</body>
+
+</html>

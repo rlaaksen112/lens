@@ -1,0 +1,63 @@
+<!-- 사용자 로그인 전 홈페이지 -->
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>렌즈픽업서비스</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+	<link rel="stylesheet" type="text/css" href="/css/homestyle.css" />
+	<link rel="stylesheet" type="text/css" href="/css/navbarstyle.css" />
+	<link rel="stylesheet" type="text/css" href="/css/scrollstyle.css" />
+</head>
+
+<body>
+	<div class="container">
+		<nav th:replace="navbar_logo :: navbarFragment"></nav>
+		<nav th:replace="navbar_statelog :: navbarFragment"></nav>
+		<nav th:replace="navbar_product :: navbarFragment"></nav>
+		<div id="wrap">
+			<!-- wrap -->
+			<div id="container">
+				<div class="homebanner">
+					<div class="your-class">
+						<div class="yc1"></div>
+						<div class="yc2"></div>
+						<div class="yc3"></div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- //wrap -->
+	</div> <!-- /container -->
+	<section>
+        <div class="scroll">
+            <div>
+                LENS<span>PICK UP</span>
+                LENS<span>PICK UP</span>
+                LENS<span>PICK UP</span>
+                LENS<span>PICK UP</span>
+            </div>
+            <div>
+                LENS<span>PICK UP</span>
+                LENS<span>PICK UP</span>
+                LENS<span>PICK UP</span>
+                LENS<span>PICK UP</span>
+            </div>
+        </div>
+    </section>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.your-class').slick({
+				dots: true,
+				autoplay: true
+			});
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>알콘</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/navbarstyle.css" />
+    <link rel="stylesheet" type="text/css" href="/css/productstyle.css" />
+</head>
+
+<body>
+    <div class="container">
+    	<nav th:replace="navbar_logo :: navbarFragment"></nav>
+    	<nav th:replace="navbar_statelog :: navbarFragment"></nav>
+    	<nav th:replace="navbar_product :: navbarFragment"></nav>
+        <div class="product" align="center">
+            <h2>
+				<a th:href="@{/member/product/alcon}">알콘</a>
+			</h2>
+        </div>
+        <div id="tab_con01" class="tab_con">
+        	<div class="slick">
+           		<div class="productList">
+           			<div class="a1">
+               			<li>
+                    		<a th:href="@{/member/product/reservation}">
+								<p><img src="/image/lens7.jpg" alt="알콘 데일리스 토탈">알콘 데일리스 토탈</p>
+							</a>
+                		</li>
+                		<li>
+							<a th:href="@{/member/product/reservation}">
+								<p><img src="/image/lens8.jpg" alt="알콘 데일리스 일루미네이트">알콘 데일리스 일루미네이트</p>
+							</a>
+                		</li>
+                		<li>
+							<a th:href="@{/member/product/reservation}">
+								<p><img src="/image/lens9.jpg" alt="알콘 데일리스 아쿠아 플러스">알콘 데일리스 아쿠아 플러스</p>
+							</a>
+                		</li>
+                	</div>
+					<div class="a2">
+						<li>
+							<a th:href="@{/member/product/reservation}">
+								<p><img src="/image/lens10.jpg" alt="알콘 에어옵틱스 나이트">알콘 프레쉬룩 원데이</p>
+							</a>
+                		</li>
+                		<li>
+							<a th:href="@{/member/product/reservation}">
+								<p><img src="/image/lens11.jpg" alt="알콘 에어옵틱스 나이트">알콘 에어옵틱스 나이트</p>
+							</a>
+                		</li>
+                		<li>
+							<a th:href="@{/member/product/reservation}">
+								<p><img src="/image/lens12.jpg" alt="알콘 에어옵틱스 데이">알콘 에어옵틱스 데이</p>
+							</a>
+                		</li>
+                	</div>
+            	</div>
+        	</div>
+    	</div>
+    </div> <!-- /container -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.productList').slick({
+				dots: true,
+				autoplay: true
+			});
+		});
+	</script>
+</body>
+
+</html>

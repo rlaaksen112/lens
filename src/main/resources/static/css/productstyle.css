@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #ffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 제품 이름 */
+.product h2 {
+    font-size: 30px;
+    margin: 30px;
+}
+
+.product h2 a{
+ 	text-decoration: none;
+    color: black;
+}
+
+.tab_con{
+	box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.tab_con .slick .productList .a1 li a{
+    transform: translateX(28%);
+    box-sizing: border-box;
+    overflow: hidden;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.tab_con .slick .productList .a1 li a img{
+	max-width: 420px;
+    margin-right: 60px;
+    margin-left: 60px;
+}
+
+.tab_con .slick .productList .a2 li a{
+	transform: translateX(28%);
+    box-sizing: border-box;
+    overflow: hidden;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.tab_con .slick .productList .a2 li a img{
+    max-width: 420px;
+    margin-right: 60px;
+    margin-left: 60px;
+}
+
+/* slick */
+.slick {}
+
+.slick .productList {
+    top: 0px;
+}
+
+.slick .productList .slick-slide {
+    height: 655px;
+}
+
+.slick .productList .a1 {
+    background-size: cover;
+}
+
+.slick .productList .a2 {
+    background-size: cover;
+}
+
+.slick .productList .slick-arrow {
+    position: absolute;
+    z-index: 50;
+    top: 50%;
+    transform: translateY(-400%);
+    font-size: 0;
+    line-height: 0;
+    border: none;
+    width: 20px;
+    height: 40px;
+    background: none;
+    transition: 0.3s;
+}
+
+.slick .productList .slick-prev {
+    left: 5%;
+}
+
+.slick .productList .slick-prev:before {
+    content: "\f104";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    font-size: 30px;
+    color: #bebebe;
+}
+
+.slick .productList .slick-next {
+    right: 5%;
+}
+
+.slick .productList .slick-next:before {
+    content: "\f105";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    font-size: 30px;
+    color: #bebebe;
+}
+
+.slick .productList .slick-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 230px;
+}
+
+.slick .productList .slick-dots li {
+    float: left;
+    margin: 0 5px;
+    list-style: none;
+    width: 8px;
+    height: 8px;
+    background: #dbdbdb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slick .productList .slick-dots li.slick-active {
+    background: #bebebe;
+}
+
+.slick .productList .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    background: none;
+    border: none;
+}
+    

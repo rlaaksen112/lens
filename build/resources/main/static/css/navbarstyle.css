@@ -1,0 +1,99 @@
+ul,li {
+    list-style: none;
+}
+
+/* navbar_logo */
+.logotitle h2 a {
+    margin: 25px;
+    font-size: 40px;
+    line-height: 80px;
+    color: #000;
+    text-decoration: none;
+}
+
+.logotitle h2 a:hover {
+    color: #f8d7da;
+    transition: 0.3s;
+}
+
+/* navbar_statelog */
+.statelog p {
+    position: absolute;
+    right: 15px;
+    top: 90px;
+}
+
+.statelog p a {
+    font-size: 15px;
+    word-spacing: -1px;
+    line-height: 1;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+/* navbar_statelog2 */
+
+.statelog2 p {
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.statelog2 p a{
+	margin-right: 10px;
+    font-size: 15px;
+    word-spacing: -1px;
+    line-height: 1;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.statelog2 p a:hover{
+    color: #bebebe;
+    transition: 0.3s;
+}
+
+/* navbar_product */
+.product_category {}
+
+.product_category ul {
+    width: 99.9%;
+    height: 60px;
+    margin-top: 50px;
+    border: 1px solid rgb(0, 0, 0);
+    background: #f8d7da;
+}
+
+.product_category ul li {
+    float: left;
+    width: 20%;
+    margin-left: -1px;
+}
+
+.product_category ul li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    padding: 20px 0;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.product_category ul li a:hover {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* navbar_admin */
+.admintitle h1 a {
+    margin: 25px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+}
+
+.admintitle h1 a:hover  {
+    color: #842029;
+    transition: 0.3s;
+}

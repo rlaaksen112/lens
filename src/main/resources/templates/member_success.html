@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>등록 완료</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+	<style>
+		body {
+			margin: 150px;
+			background-color: #ffff;
+    		font-family: 'Poppins', sans-serif;
+		}
+
+		.headerbox {
+			position: relative;
+			padding: 25px;
+			margin-top: 30px;
+			background-color: #f5c2c7;
+			color: white;
+		}
+
+		.box {
+			border: solid 3px #f5c2c7;
+			padding: 100px;
+		}
+		
+		.box a{
+			text-decoration: none;
+			color: #5b5b5b;
+			font-size: 18px;
+			margin-top: 30px;
+		}
+
+		.headerbox i {
+			position: absolute;
+			font-weight: 900;
+			font-size: 30px;
+			right: 20px;
+			top: 13px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container" align="center">
+		<div class="headerbox">
+			<i class="fas fa-times-circle"></i>
+		</div>
+		<div class="box">
+			<h1>등록 완료 !</h1>
+			<a th:href="@{/member/home}">
+				<p>확인 (홈페이지로 돌아가기)</p>
+			</a>
+		</div>
+	</div>
+</body>
+
+</html>
